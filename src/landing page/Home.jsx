@@ -3,6 +3,7 @@ import Slider from './Slider'
 import Vision from './VIsion'
 import styled from 'styled-components'
 import Services from './Services'
+import Consulting from './Consulting'
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
         <Slider/>
         <Vision/>
         <Services/>
+        <Consulting/>
     </Wrapper>
   )
 }
