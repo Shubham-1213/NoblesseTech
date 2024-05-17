@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Services() {
+function SupplyChain() {
   const data = [
-    {detail:'MANAGEMENT CONSULTING',url:'../src/assets/services/consultation.png'},
-    {detail:'INVESTMENT ADVISORY',url:'../src/assets/services/auditor.png'},
-    {detail:'PROGRAM MANAGEMENT',url:'../src/assets/services/programmer.png'},
-    {detail:'PROCUREMENT AND SUPPLY CHAIN',url:'../src/assets/services/trolley.png'},
+    {detail:'PHARMACY',url:'../src/assets/supply-chain/supply1.png'},
+    {detail:'CLINICAL MATERIALS',url:'../src/assets/supply-chain/supply2.png'},
+    {detail:'SUPPORT SERVICES',url:'../src/assets/supply-chain/supply3.png'},
+    {detail:'CAPITAL EQIPMENTS',url:'../src/assets/supply-chain/supply4.png'},
   ];
 
   return (
     <Wrapper>
-      <h1>OUR SERVICES</h1>
+      <h1>PROCUREMENT AND SUPPLY CHAIN</h1>
       <div className="card-container">
         {
           data.map((item, index) => {
@@ -86,19 +86,18 @@ const Wrapper = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 20px;
     }
 
     .card {
-      width: 90%;
+      width: 100%;
+      max-width: 300px;
+      padding: 10px;
       margin-bottom: 20px;
     }
-
-    h1 {
-      font-size: 5vw;
-      text-align: center;
+    h1{
+        font-size: 5vw;
     }
   }
 `;
 
-export default Services;
+export default SupplyChain;

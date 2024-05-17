@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Services() {
+function Program() {
   const data = [
-    {detail:'MANAGEMENT CONSULTING',url:'../src/assets/services/consultation.png'},
-    {detail:'INVESTMENT ADVISORY',url:'../src/assets/services/auditor.png'},
-    {detail:'PROGRAM MANAGEMENT',url:'../src/assets/services/programmer.png'},
-    {detail:'PROCUREMENT AND SUPPLY CHAIN',url:'../src/assets/services/trolley.png'},
+    {detail:'SURGICAL AND MEDICAL MANAGEMENT',url:'../src/assets/program/program1.png'},
+    {detail:'HEALTHCARE IT',url:'../src/assets/program/program2.png'},
+    {detail:'DIALYSIS',url:'../src/assets/program/program3.png'},
+    {detail:'DIAGNOSTIC LABS',url:'../src/assets/program/program4.png'},
   ];
 
   return (
     <Wrapper>
-      <h1>OUR SERVICES</h1>
+      <h1>PROGRAM MANAGEMENT</h1>
       <div className="card-container">
         {
           data.map((item, index) => {
@@ -75,7 +75,6 @@ const Wrapper = styled.div`
     color: #2D9596;
     font-size: 20px;
   }
-
   .card:hover {
     transform: translateY(-10px); /* Move card up */
     box-shadow: 0 4px 8px rgba(255, 225, 255, 1); /* Apply box shadow */
@@ -86,19 +85,17 @@ const Wrapper = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 20px;
     }
 
     .card {
-      width: 90%;
+      width: 100%;
+      max-width: 300px;
       margin-bottom: 20px;
     }
-
-    h1 {
-      font-size: 5vw;
-      text-align: center;
+    h1{
+        font-size: 5vw;
     }
   }
 `;
 
-export default Services;
+export default Program;

@@ -6,12 +6,12 @@ import styled, { keyframes } from 'styled-components';
 function Slider() {
   return (
     <Wrapper>
-      <Carousel showThumbs={false} showStatus={false} autoPlay={true} interval={3000}>
-        <div>
+      <Carousel showThumbs={false} showStatus={false} autoPlay={true} interval={3000} infiniteLoop={true} >
+        <div className='carousel-item'>
           <img src="../src/assets/carousel/boxing3.jpg" alt="Boxing 3" />
           <p className="legend">Legend 1</p>
         </div>
-        <div>
+        <div className='carousel-item'>
           <img src="../src/assets/carousel/boxing2.jpg" alt="Boxing 2" />
           <p className="legend">Legend 2</p>
         </div>
@@ -31,26 +31,43 @@ function Slider() {
 const fadeInOut = keyframes`
   0% { opacity: 0; transform: translateY(20px); }
   20% { opacity: 1; transform: translateY(0); }
-  80% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 0; transform: translateY(0); }
   100% { opacity: 0; transform: translateY(-20px); }
 `;
 
 const Wrapper = styled.div`
   width: 100%;
   .legend {
-    animation: ${fadeInOut} 3s ease-in-out forwards;
-    position: absolute;
-    top: 50%;  /* Position vertically centered */
-    left: 50%;  /* Position horizontally centered */
-    transform: translate(-50%, -50%);  /* Center the element */
-    background-color: rgba(0, 0, 0, 0.5);  /* Transparent background */
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent !important;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
-    text-align: center;  /* Center align the text */
+    font-size: 50px !important; 
+    text-align: center;
+    animation: ${fadeInOut} 3s ease-in-out infinite;
+    opacity: 1; /* Initial opacity 0 to trigger animation */
+  }
+
+  .carousel-item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
   }
 `;
+
 
 export default Slider;
 

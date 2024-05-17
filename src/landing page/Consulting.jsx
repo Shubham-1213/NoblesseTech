@@ -37,7 +37,7 @@ const Wrapper = styled.div`
   margin: auto;
 
   h1 {
-    color: green;
+    color: #F5E8C7;
     margin-bottom: 30px;
   }
 
@@ -60,8 +60,9 @@ const Wrapper = styled.div`
     box-shadow: 0 4px 8px rgba(155, 110, 210, 0.2); 
     padding: 20px; 
     text-align: center; 
-    background: white;  
+    background: #B5C0D0;  
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .card-img {
@@ -71,7 +72,30 @@ const Wrapper = styled.div`
   }
 
   .card-detail {
-    color: green;
+    color: #2D9596;
+    font-size: 20px;
+  }
+
+  .card:hover {
+    transform: translateY(-10px); /* Move card up */
+    box-shadow: 0 4px 8px rgba(255, 225, 255, 1); /* Apply box shadow */
+  }
+
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+    h1{
+      font-size: 5vw;
+  }
   }
 `;
 
