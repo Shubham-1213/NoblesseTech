@@ -16,7 +16,7 @@ function Vision() {
         </div>
         <div className="text-container">
           <h4>OUR VISION</h4>
-          <h2 style={{ color: "#2D9596" }}>INTELLIGENCE DRIVEN HEALTHCARE</h2>
+          <h2 style={{ color: "#F6B17A" }}>INTELLIGENCE DRIVEN HEALTHCARE</h2>
           <p>
             is a healthcare solutions firm focused on providing global support
             that facilitates the governments and organizations in providing
@@ -46,23 +46,26 @@ function Vision() {
 
 const Wrapper = styled.div`
   .service {
-    margin-top: 30px;
-    height: 300px;
+    margin-top: 30px; 
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 20px;
   }
 
   .text-container {
     width: 60%;
+    color: #7077A1;
+    font-size: 18px;
+    
   }
   .service-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     font-size: 23px;
     font-weight: bold;
     text-align: center;
@@ -101,7 +104,7 @@ const Wrapper = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(245, 232, 199, 0.8);
+    background-color: rgb(246, 177, 122, 0.8);
     /* Overlay color with reduced opacity */
     transition: top 0.5s ease, opacity 0.5s ease;
     /* Transitions for top position and opacity */

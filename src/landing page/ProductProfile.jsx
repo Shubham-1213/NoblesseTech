@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   margin: auto;
 
   h1 {
-    color: #F5E8C7;
+    color: #F6B17A;
     margin-bottom: 30px;
   }
 
@@ -49,7 +49,6 @@ const Wrapper = styled.div`
   }
 
   .card {
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,19 +65,25 @@ const Wrapper = styled.div`
   }
 
   .card-detail {
-    color: #2D9596;
+    color: #7077A1;
     font-size: 23px;
   }
+  .card-detail: hover {
+    color: #747bff;
+  }
+
+
 
   @media (max-width: 768px) {
     .card-container {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 100%;
     }
 
     .card {
-      width: 100%;
+      width: 90%;
       max-width: 300px;
       margin-bottom: 20px;
     }

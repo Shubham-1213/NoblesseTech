@@ -37,7 +37,7 @@ const Wrapper = styled.div`
   margin: auto;
 
   h1 {
-    color: #F5E8C7;
+    color: #F6B17A;
     margin-bottom: 30px;
   }
 
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
   }
 
   .card {
@@ -60,7 +60,7 @@ const Wrapper = styled.div`
     box-shadow: 0 4px 8px rgba(155, 110, 210, 0.2); 
     padding: 20px; 
     text-align: center; 
-    background: white;  
+    background: #7077A1;  
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -72,7 +72,7 @@ const Wrapper = styled.div`
   }
 
   .card-detail {
-    color: #2D9596;
+    color: #31363F;
     font-size: 20px;
   }
 

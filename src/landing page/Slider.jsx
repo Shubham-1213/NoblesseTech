@@ -9,19 +9,19 @@ function Slider() {
       <Carousel showThumbs={false} showStatus={false} autoPlay={true} interval={3000} infiniteLoop={true} >
         <div className='carousel-item'>
           <img src="../src/assets/carousel/boxing3.jpg" alt="Boxing 3" />
-          <p className="legend">Legend 1</p>
+          <p className="legend">SMART HEALTHCARE SOLUTIONS </p>
         </div>
         <div className='carousel-item'>
           <img src="../src/assets/carousel/boxing2.jpg" alt="Boxing 2" />
-          <p className="legend">Legend 2</p>
+          <p className="legend">ITS ALL ABOUT EXCELLENCE</p>
         </div>
         <div>
           <img src="../src/assets/carousel/gym1.jpg" alt="Gym 1" />
-          <p className="legend">Legend 3</p>
+          <p className="legend">BEST AMONG THE BEST</p>
         </div>
         <div>
           <img src="../src/assets/carousel/gym2.jpg" alt="Gym 2" />
-          <p className="legend">Legend 4</p>
+          <p className="legend">EFFICIENT. COMMITTED. TRUSTED</p>
         </div>
       </Carousel>
     </Wrapper>
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent !important;
-    color: white;
+    color: #F6B17A !important;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 50px !important; 
@@ -65,6 +65,13 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure the image covers the container */
+  }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    .legend {
+      font-size: 30px !important;
+    }
   }
 `;
 

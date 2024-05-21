@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from "../assets/home/logo.png";
 import styled from 'styled-components';
 
 export default function NavBar() {
@@ -27,14 +28,14 @@ export default function NavBar() {
   }, []);
 
   return (
-    <Wrapper isScrolled={isScrolled}>
+    <Wrapper isScrolled={isScrolled} isOpen={isOpen}>
       <div className='navbar'>
         <div className='title'>
           <NavLink to='/'>
-            <h1 className='h1'>Medical Equipment</h1>
+            <img src={logo} alt='logo' />
           </NavLink>
         </div> 
-        <div className='menu'onClick={handleOnClick}>
+        <div className='menu' onClick={handleOnClick}>
           <span></span>
           <span></span>
           <span></span>
@@ -59,7 +60,7 @@ const Wrapper = styled.div`
     position: fixed;
     width: 100%;
     justify-content: space-around;
-    background-color: ${(props) => (props.isScrolled ? '#F5E8C7' : 'transparent')};
+    background-color: ${(props) => (props.isScrolled ? '#424769' : 'transparent')};
     display: flex;
     flex-direction: row;
     padding: 10px 20px;
@@ -70,14 +71,14 @@ const Wrapper = styled.div`
 
   .title .h1 {
     margin: 0;
-    color: ${(props) => (props.isScrolled ? '#333' : '#f2f2f2')};
+    color: ${(props) => (props.isScrolled ? '#F6B17A' : '#F6B17A')};
     transition: color 0.3s ease-in-out;
   }
 
   .links a {
     margin-left: 15px;
     text-decoration: none;
-    color: ${(props) => (props.isScrolled ? '#333' : 'white')};
+    color: ${(props) => (props.isScrolled ? '#F6B17A' : '#F6B17A')};
     transition: color 0.3s ease-in-out;
   }
 
@@ -85,73 +86,108 @@ const Wrapper = styled.div`
     text-decoration: underline;
   }
 
-  .links{
-    margin-right:80px;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-    font-size:20px;
+  .links {
+    margin-right: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
   }
 
-  .menu{
+  .menu {
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 60px;
     flex-direction: column;
     justify-content: space-between;
     width: 2.25rem;
     height: 1.8rem;
+    cursor: pointer;
   }
 
-  .menu span{
+  .menu span {
     height: 0.4rem;
     width: 100%;
     background-color: black;
     border-radius: 0.2rem;
+    transition: background-color 0.3s ease-in-out;
   }
 
   @media (max-width: 768px) {
-     .title .h1{
+    .title .h1 {
       font-size: 8vw;
       color: black;
     }
+
     .navbar {
       position: fixed;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      background-color: #F5E8C7;
+      background-color: ${(props) => (props.isScrolled ? '#424769' : 'transparent')};
       color: black;
     }
+
+    .navbar img {
+      width: 120px;
+    }
+
     .links {
       display: none;
     }
-    .menu{
+
+    .menu {
       display: flex;
     }
-    .links-open{
+
+    .links-open {
       display: flex;
       flex-direction: column;
       width: 100%;
       align-items: center;
       color: black;
       justify-content: space-around;
+      animation: openMenu 0.3s ease-in-out;
     }
 
-    .links-open a{
+    .links-open a {
+      margin-top: 10px;
       color: black;
+      border-bottom: 1px solid black;
+      width: 100%;
     }
-    .links a{
+
+    .links a {
       color: black;
     }
 
-    .navbar .menu{
+    .navbar .menu {
       display: flex;
     }
+  }
 
+  @keyframes openMenu {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-    
+  @keyframes closeMenu {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
   }
 `;
+

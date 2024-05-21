@@ -1,5 +1,5 @@
 import "./footer.css";
-import logo from "../assets/home/logo-dark.png"
+import logo from "../assets/home/logo.png"
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom';

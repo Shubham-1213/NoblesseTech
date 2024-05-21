@@ -58,9 +58,9 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #F5E8C7;
+    background-color: #424769;
     font-size: 15px;
-    color: black;
+    color: #F6B17A;
 }
 
 @media (max-width: 768px) {
@@ -89,6 +89,8 @@
     }
     .copyright-container-footer{
         width: 100%;
-        
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
 }
